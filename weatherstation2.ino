@@ -133,9 +133,7 @@ Serial.println(strwd);}
 else
   strwd = "E";
 Serial.println(strwd);
-if(strwd == ""){
-  strwd = "N";
-  }
+
 LastValue = CalDirection;
 
 }
@@ -217,7 +215,7 @@ LastValue = CalDirection;
   }
   else Serial.println("error starting temperature measurement\n");
 
-  delay(500);  // Pause for 5 seconds.
+  delay(30000);  // Pause for 30 seconds.
 }
 
 
