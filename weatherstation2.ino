@@ -215,7 +215,7 @@ LastValue = CalDirection;
   }
   else Serial.println("error starting temperature measurement\n");
 
-  delay(30000);  // Pause for 30 seconds.
+  delay(3000);  // Pause for 30 seconds.
 }
 
 
