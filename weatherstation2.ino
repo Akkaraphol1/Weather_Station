@@ -105,6 +105,7 @@ if(abs(CalDirection - LastValue) > 5)
 Serial.print(VaneValue); Serial.print("\t\t");
 Serial.print(CalDirection); Serial.print("\t\t");
 
+// Converts compass direction to heading
 if(CalDirection < 22){
 strwd = "N";
 Serial.println(strwd);}
@@ -260,40 +261,6 @@ void write_to_google_sheet(String params) {
     http.end();
 }
 
-
-
-// Converts compass direction to heading
-/*void getHeading(int direction) {
-if(direction < 22){
-strwd = "N";
-Serial.println("N");}
-else if (direction < 67){
-strwd = "NE";
-Serial.println("NE");}
-else if (direction < 112){
-strwd = "E";
-Serial.println("E");}
-else if (direction < 157){
-strwd = "SE";
-Serial.println("SE");}
-else if (direction < 212){
-strwd = "S";
-Serial.println("S");}
-else if (direction < 247){
-strwd = "SW";
-Serial.println("SW");}
-else if (direction < 292){
-strwd = "W";
-Serial.println("W");}
-else if (direction < 337){
-strwd = "NW";
-Serial.println("NW");}
-else
-strwd = "N";
-Serial.println("N");
-delay(1000);
-}
-*/
 void isr_rotation () {
 
 if ((millis() - ContactBounceTime) > 15 ) { // debounce the switch contact.
